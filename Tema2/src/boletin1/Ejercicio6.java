@@ -18,9 +18,9 @@ public class Ejercicio6 {
 		// Creamos la variable discriminante donde calcularemos el resultado del discriminante 
 		double discriminante;
 		
-		/* Creamos la variable ecuacion donde calcularemos el resultado de la ecuacion de segundo grado a partir de los valores 
-		introducidos por el usuario */
-		double ecuacion;
+		// Creamos las variables para las soluciones
+		double x1;
+		double x2;
 		
 		// Creamos el scanner 
 		Scanner reader = new Scanner (System.in);
@@ -37,13 +37,27 @@ public class Ejercicio6 {
 		System.out.println("Introduzca el valor de c");
 		c = reader.nextDouble();
 		
-		// Calculamos el resultado del discriminante 
-		 
-		// Calculamos el resultado de la ecuacion 
-		ecuacion = -b +- Math.sqrt(b*b) - 4 * a * c / 2 * a;
-		
-		
+		// si a == 0
+		if (a == 0) {
+			x1 = (double) -c / b;
+			System.out.println("La ecuación sólo tiene una solución: " + x1);
+		} else {
+			discriminante = b * b - 4 * a * c;
 
+				if (discriminante < 0) {
+					System.out.println("La ecuación no tiene solución");
+				} else {
+					// (-5 + 3) /4 = -2 / 4
+					x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+					// (-5 -3/ 4 = -2
+					x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+					System.out.println("Primera solución: x1 = " + x1);
+					System.out.println("Segunda solución: x2 = " + x2);
+					}
+				}
+
+		// Cerramos el scanner		
+		reader.close();
 	}
 
 }

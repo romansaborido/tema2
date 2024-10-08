@@ -68,9 +68,9 @@ public class Ejercicio5 {
 			System.out.println("3. " + b);	
 		}	
 		
-				// Cerramos el scanner
-				reader.close();
+		// Cerramos el scanner
+		reader.close();
 				
 				
-			}
-		}
+	}
+}
