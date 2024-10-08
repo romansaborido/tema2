@@ -31,41 +31,41 @@ public class Ejercicio5 {
 		c = reader.nextInt();
 		
 		// Creamos la condición:
-
-		if (a > c && a > b && b > c) {
+			
+		if (a >= b && b >= c) {
 			System.out.println("Ordenamos de mayor a menor:");
 			System.out.println("1. " + a);
 			System.out.println("2. " + b);
 			System.out.println("3. " + c);	
-		} else if (a > c && a > b && c > b) {
+		} else if (a >= c && c >= b) {
 			System.out.println("Ordenamos de mayor a menor:");
 			System.out.println("1. " + a);
 			System.out.println("2. " + c);
 			System.out.println("3. " + b);	
 		}
 		
-		if (b > a && b > c && c > a) {
-			System.out.println("Ordenamos de mayor a menor:");
-			System.out.println("1. " + b);
-			System.out.println("2. " + c);
-			System.out.println("3. " + a);	
-		} else if (b > a && b > c && a > c) {
+		if (b >= a && a >= c) {
 			System.out.println("Ordenamos de mayor a menor:");
 			System.out.println("1. " + b);
 			System.out.println("2. " + a);
 			System.out.println("3. " + c);	
+		} else if (b >= c && c >= a) {
+			System.out.println("Ordenamos de mayor a menor:");
+			System.out.println("1. " + b);
+			System.out.println("2. " + c);
+			System.out.println("3. " + a);	
 		}
 		
-		if (c > a && c > b && a > b) {
-			System.out.println("Ordenamos de mayor a menor:");
-			System.out.println("1. " + c);
-			System.out.println("2. " + a);
-			System.out.println("3. " + b);	
-		} else if (c > a && c > b && b > a) {
+		if (c >= b && b >= a) {
 			System.out.println("Ordenamos de mayor a menor:");
 			System.out.println("1. " + c);
 			System.out.println("2. " + b);
 			System.out.println("3. " + a);	
+		} else if (c >= a && a >= b) {
+			System.out.println("Ordenamos de mayor a menor:");
+			System.out.println("1. " + c);
+			System.out.println("2. " + a);
+			System.out.println("3. " + b);	
 		}	
 		
 				// Cerramos el scanner
