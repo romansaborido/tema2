@@ -35,6 +35,41 @@ public class Ejercicio4 {
 		// Comprobamos si el numero que ha introducido el usuario es valido y procedemos a pasarlo a formato alfabetico
 		if (numero >= 0 && numero <= 99) {
 			
+			// Comprobamos si el numero es uno de los siguientes que no se nombran de manera comun
+			if (numero >= 21 && numero <=29) {
+				
+				// switch (numero) {
+				switch (numero) {
+					case 21:
+						System.out.println("Veintiuno");
+						break;
+					case 22:
+						System.out.println("Veintidos");
+						break;
+					case 23:
+						System.out.println("Veintitres");
+						break;
+					case 24:
+						System.out.println("Veinticuatro");
+						break;
+					case 25:
+						System.out.println("Veinticinco");
+						break;
+					case 26:
+						System.out.println("Veintiseis");
+						break;
+					case 27:
+						System.out.println("Veintisiete");
+						break;
+					case 28:
+						System.out.println("Veintiocho");
+						break;
+					case 29:
+						System.out.println("Veintinueve");
+						break;
+				}
+			}
+			
 			// Comprobamos si el numero tiene una cifra o dos 
 			if (numero >= 0 && numero <= 9) {
 				
@@ -106,6 +141,7 @@ public class Ejercicio4 {
 							break;
 					}
 					
+				
 				// Del número 19 en adelante aplicar esta serie de funciones
 				} else {
 				
@@ -178,9 +214,9 @@ public class Ejercicio4 {
 					};
 					
 					// Imprimimos el resultado
-					if (numero % 10 != 0) {
+					if (numero % 10 != 0 && (!(numero >= 21 && numero <=29)))  {
 						System.out.println(decenaLetras + " y " + unidadLetras);
-					} else {
+					} else if (!(numero >= 21 && numero <=29)) {
 						System.out.println(decenaLetras);
 					}
 				

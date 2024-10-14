@@ -53,7 +53,7 @@ public class Ejercicio6 {
             }
             
             // Mostrar la nueva hora
-            System.out.printf("La hora después de incrementar un segundo es: " + horas + ":" + minutos + ":" + segundos);
+            System.out.println("La hora después de incrementar un segundo es: " + horas + ":" + minutos + ":" + segundos);
         }
         
         // Cerramos el scanner
