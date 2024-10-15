@@ -18,8 +18,15 @@ public class Ejercicio4 {
 		// Creamos la variable suma donde almacenaremos la suma de los numeros positivos
 		int suma = 0;
 		
+		// Creamos la variable sumaNegativos donde almacenaremos la suma de los numeros negativos
+		int sumaNegativos = 0;
+		
+		/* Creamos la variable contadorNegativos donde almacenaremos el numero de numeros negativos que
+		introduzca el usuario */
+		int contadorNegativos = 0;
+		
 		// Creamos la variable media donde almacenaremos la media de los numeros negativos
-		int media = 0;
+		double media = 0;
 		
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
@@ -31,14 +38,16 @@ public class Ejercicio4 {
 		// Creamos el bucle: mientras que recuento sea menor que 10 el bucle se sigue ejecutando
 		while (contador < 10) {
 			
+			++contador;
+			
 			if (numero == 0) {
 				++contadorCeros;
 			} else if (numero > 0) {
-				++contador;
 				suma += numero;
 			} else {
-				++contador;
-				media = suma / contador;
+				contadorNegativos++;
+				sumaNegativos += numero;
+				media = sumaNegativos / (double)contador;
 			} 
 			
 			System.out.println("Introduzca un número");
@@ -49,7 +58,7 @@ public class Ejercicio4 {
 		// Mostramos el resultado final al usuario
 		System.out.println("Suma de los números positivos: " + suma);
 		System.out.println("Media de los números negativos: " + media);
-		System.out.println("Número de ceros introducidos: " + contador);
+		System.out.println("Número de ceros introducidos: " + contadorCeros);
 		
 		// Cerramos el scanner
 		reader.close();
