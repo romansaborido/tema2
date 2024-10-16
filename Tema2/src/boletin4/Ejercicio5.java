@@ -13,11 +13,11 @@ public class Ejercicio5 {
 		// Creamos la variable suma donde almacenaremos la suma de todas las edades recogidas 
 		int suma = 0;
 		
-		// Creamos la variable media donde almacenaremos la edad media de los alumnos 
-		int media = 0;
-		
 		// Creamos la variable recuento para obtener el numero de alumnos 
 		int recuento = 0;
+		
+		// Creamos la variable media donde almacenaremos la edad media de los alumnos 
+		int media = suma / recuento;
 		
 		// Crearemos la variable recuentoMayoresEdad para obtener el numero de alumnos que son mayores de edad
 		int recuentoMayoresEdad = 0;
@@ -32,14 +32,18 @@ public class Ejercicio5 {
 		// Creamos el bucle: si el numero introducido es menor o igual a 0, el bucle finaliza 
 		while (edad > 0) {
 			
+			// Incrementamos la variable recuento cada vez que el usuario introduzca un numero
 			recuento++;
-			suma += edad;
-			media = suma / recuento;
 			
+			// Sumamos todas las edades que introduzca el usuario
+			suma += edad;
+		
+			// Si la edad es mayor o igual que 18 incrementamos la variable recuentoMayoresEdad
 			if (edad >= 18) {
 				recuentoMayoresEdad++;
 			}
 			
+			// Pedimos la edad al usuario
 			System.out.println("Introduzca la edad del alumno");
 			edad = reader.nextInt();
 		}

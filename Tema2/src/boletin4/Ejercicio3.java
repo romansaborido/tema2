@@ -28,9 +28,13 @@ public class Ejercicio3 {
 		// Creamos el while: mientras que el numero no sea negativo el bucle se sigue ejecutando
 		while (numero >= 0) {
 			
+			// Vamos sumando los numeros
 			suma += numero;
+			
+			// Vamos incrementando el contador cada vez que el usuario introduzca un numero
 			++contador;
 			
+			// Pedimos el numero entero al usuario
 			System.out.println("Introduzca un número entero positivo");
 			numero = reader.nextInt();
 		}

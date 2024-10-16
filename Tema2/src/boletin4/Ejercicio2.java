@@ -22,8 +22,10 @@ public class Ejercicio2 {
 		// Creamos el while: mientras que el numero no sea negativo se sigue ejecutando 
 		while (numero >= 0) {
 			
+			// Vamos incrementando el recuento de numeros cada vez que el usuario introduzca un numero
 			recuento++;
 			
+			// Pedimos el numero entero al usuario
 			System.out.println("Introduzca un numero entero positivo");
 			numero = reader.nextInt();
 		}
