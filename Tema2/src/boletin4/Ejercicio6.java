@@ -31,9 +31,11 @@ public class Ejercicio6 {
 		}
 		
 		// Imprimimos la altura maxima
-		System.out.println(altura == -1 ? "Introduzca una altura válida" : "La altura máxima es " + alturaMaxima);
+		System.out.println("La altura máxima es: " + alturaMaxima);
 		
-		// Corregir
+		// Cerramos el scanner
+		reader.close();
+		
 		
 	}
 
