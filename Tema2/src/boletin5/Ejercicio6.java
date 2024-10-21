@@ -18,19 +18,23 @@ public class Ejercicio6 {
 		String jugada2;
 		
 		// Creamos la variable reiniciar para almacenar el caracter que hara que empiece otra partida
-		char reiniciar = 'S';
+		String reiniciar = "S";
 		
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
 		
 		do {
-			// Turno del jugador 1
-			System.out.println("Turno del jugador 1");
-			jugada1 = reader.nextLine();
+			// Turno del jugador 1: creamos el bucle que se seguira ejecutando mientras que la jugada1 sea un caracter no valido
+			do {
+				System.out.println("Turno del jugador 1");
+				jugada1 = reader.nextLine();
+			} while (!jugada1.equalsIgnoreCase(PIEDRA) && !jugada1.equalsIgnoreCase(PAPEL) && !jugada1.equalsIgnoreCase(TIJERAS));
 			
-			// Turno del jugador 2
-			System.out.println("Turno del jugador 2");
-			jugada2 = reader.nextLine();
+			// Turno del jugador 2: creamos el bucle que se seguira ejecutando mientras que la jugada2 sea un caracter no valido
+			do {
+				System.out.println("Turno del jugador 2");
+				jugada2 = reader.nextLine();
+			} while (!jugada2.equalsIgnoreCase(PIEDRA) && !jugada2.equalsIgnoreCase(PAPEL) && !jugada2.equalsIgnoreCase(TIJERAS));
 			
 			// Si introducen la misma cadena quedan empate, sino tenemos que valorar el desempate
 			if (jugada1.equalsIgnoreCase(jugada2)) {
@@ -44,12 +48,23 @@ public class Ejercicio6 {
 			} else {
 				System.out.println("GANADOR --> JUGADOR 2");
 			}
+			
+			// Preguntamos al usuario si quiere volver a jugar
+			System.out.println("¿Quieres volver a jugar? Pulse la tecla S");
+			reiniciar = reader.nextLine();
 		
-		// Mientras que reiniciar sea S, o el jugador 1 o el 2 no introduzcan un valor valido
-		} while ((reiniciar == 'S') || (!jugada1.equalsIgnoreCase(PIEDRA)) || (!jugada1.equalsIgnoreCase(PAPEL)) || (!jugada1.equalsIgnoreCase(TIJERAS)) || (!jugada2.equalsIgnoreCase(PIEDRA)) || (!jugada2.equalsIgnoreCase(PAPEL)) || (!jugada2.equalsIgnoreCase(TIJERAS)));
+		// Mientras que reiniciar sea S, se repite el juego, si pulsamos cualquier otra tecla, termina el programa
+		} while (reiniciar.equalsIgnoreCase("S"));
+		
+		// Mostramos el mensaje "Fin del juego" al salir del bucle
+		System.out.println("Fin del juego");
+		
+		// Cerramos el scanner
+		reader.close();
 	
 		
 	}
+	
 }
 
 

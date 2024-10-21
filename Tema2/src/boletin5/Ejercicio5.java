@@ -41,6 +41,7 @@ public class Ejercicio5 {
 				max = numeroRandom;
 			}
 			
+		// Mientras que la respuesta no sea igual, el bucle se seguira ejecutando
 		} while (!respuesta.equalsIgnoreCase("igual"));
 		
 		// Mostramos el resultado
