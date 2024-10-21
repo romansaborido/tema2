@@ -24,22 +24,22 @@ public class Ejercicio7 {
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
 				
-		// Pedimos al usuario que introduzca el número1
-		System.out.println("Introduzca un número entero");
-		numero1 = reader.nextInt();
-				
-		// Pedimos al usuario que introduzca el número2
-		System.out.println("Introduzca un número entero");
-		numero2 = reader.nextInt();
-				
-		// Establecemos las operaciones
-		suma = numero1 + numero2;
-		resta = numero1 - numero2;
-		multiplicacion = numero1 * numero2;
-		division = numero1 / numero2;
-		
 		// Creamos el bucle para el menú
 		do {
+			// Pedimos al usuario que introduzca el número1
+			System.out.println("Introduzca un número entero");
+			numero1 = reader.nextInt();
+					
+			// Pedimos al usuario que introduzca el número2
+			System.out.println("Introduzca un número entero");
+			numero2 = reader.nextInt();
+			
+			// Establecemos las operaciones
+			suma = numero1 + numero2;
+			resta = numero1 - numero2;
+			multiplicacion = numero1 * numero2;
+			division = (double)numero1 / (double)numero2;
+			
 			// Mostramos al usuario el menú
 			System.out.println("A. SUMAR LOS NÚMEROS");
 			System.out.println("B. RESTAR LOS NÚMEROS");
