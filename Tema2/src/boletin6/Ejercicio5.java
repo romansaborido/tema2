@@ -23,21 +23,17 @@ public class Ejercicio5 {
 		System.out.print("!" + numero + " = ");
 		
 		// Mientras que i sea mayor o igual a 1 decrementamos el valor de i
-		for (int i = numero ; i >= 1 ; i--) {
+		for (int i = numero ; i >= 2 ; i--) {
 			
 			// Calculamos el factorial
 			factorial *= i;
 			
-			// Si i no es 1
-			if (i != 1) {
+			// Mostramos la operacion
 			System.out.print(i + " x ");
-			}
-			
-			// Si i es 1
-			if (i == 1) {
-			System.out.println(i + " = " + factorial);
-			}
 		}
+		
+		// Mostramos el resultado final 
+		System.out.println("1 = " + factorial);
 		
 		// Cerramos el scanner
 		reader.close();
