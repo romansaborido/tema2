@@ -13,11 +13,13 @@ public class Ejercicio2 {
 		Scanner reader = new Scanner(System.in);
 		
 		// Pedimos el numero al usuario
-		System.out.println("Aprende los múltiplos de tres con este programa! Introduzca un número");
+		System.out.println("¡Aprende los múltiplos de tres con este programa! Introduzca un número");
 		n = reader.nextInt();
 		
-		// Creamos el bucle
-		for (int i = 1 ; i<=n ; i += 3) {
+		// Mientras que i sea menor o igual a n incrementamos su valor de 3 en 3
+		for (int i = 3 ; i<=n ; i += 3) {
+			
+			// Imprimimos el valor de i
 			System.out.println(i);
 		}
 		
