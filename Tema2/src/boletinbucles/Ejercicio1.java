@@ -72,35 +72,29 @@ public class Ejercicio1 {
 		
 
 		// Si la i es menor o igual a segundosIncrementar, incrementamos segundos
-		for (int i = 1 ; i <= segundosIncrementar ; i++) {
+		for (int i = 0 ; i < segundosIncrementar ; i++) {
 			
 			// Incrementamos los segundos
 			segundos++;
 			
 			// Si segundos == 60
 			if (segundos == 60) {
+				segundos = 0;
 				minutos++;
-				// Si minutos == 60
-				if (minutos == 60) {
-					horas++;
-				}
 			}
-		}
-		
-		// Mostramos el resultado final
-		if (segundos == 60 && minutos != 60) {
-			System.out.println(horas + ":" + minutos + ":00");
-		} else if (segundos == 60 && minutos == 60) {
-			System.out.println(horas + ":" + "00:00");
-		} else {
-			System.out.println(horas + ":" + minutos + ":" + segundos);
-		}
-		
+				
+			// Si minutos == 60
+			if (minutos == 60) {
+				minutos = 0;
+				horas++;
+			}
 			
-
+			// Si horas == 24
+			if (horas == 24) {
+				horas = 0;
+				}
+		}
 		
-		
-	
 		
 		// Cerramos el scanner
 		reader.close();

@@ -6,6 +6,9 @@ public class Ejercicio8 {
 
 	public static void main(String[] args) {
 		
+		// Corregir quitando los dos for 
+		// Tenemos que establecer un minimo y un maximo (cambia si la a es mayor que b o al reves, entonces se establecen el minimo y el maximo en un solo for)
+		
 		// Creamos la variable A donde almacenaremos el primer numero que introduzca el usuario
 		int A;
 		
