@@ -9,9 +9,6 @@ public class Ejercicio7 {
 		// Creamos la variable numero para almacenar el numero que le pediremos al usuario
 		int numero;
 		
-		// Creamos la variable contador
-		int contador = 0;
-		
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
 		
@@ -25,23 +22,27 @@ public class Ejercicio7 {
 			assert (numero > 0) : "El número debe ser mayor que 0";
 		} while (numero <= 0);
 		
+		// Incrementamos el valor de i mientras que sea menor o igual a numero. Contamos de 1 al numero
+		for (int i = 1 ; i <= numero ; i++) {
+			
+			// Incrementamos el valor de j mientras que sea menor o igual a i. Contamos hasta i
+			for (int j = 1 ; j <= i ; j++) {
+				System.out.print(j);
+			}
+			
+			// Decrementamos el valor de k mientras que sea mayor o igual a 1. Contamos desde i - 1 hasta el 1
+			for (int k = i - 1 ; k >= 1 ; k--) {
+				System.out.print(k);
+			}
+			
+			// Añadimos al final de la iteracion de los anteriores for un salto de linea
+			System.out.println();
+		}
 		
-		for (int i = numero ; i <= 1 ; numero--)
+		// Cerramos el scanner
+		reader.close();
 			
 		
-		
-		
-		
-		
-		
-		
-		
-			
-		
-		
-		
-		
-
 	}
 
 }
