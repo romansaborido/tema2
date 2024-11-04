@@ -23,19 +23,14 @@ public class Ejercicio8 {
 		Scanner reader = new Scanner(System.in);
 		
 		// Pedimos el numero al usuario
-		System.out.print("Dime un número: ");
+		System.out.print("Dime un número inicial: ");
 		numero = reader.nextInt();
 		
+		// Asignamos el valor de numero a numeroAnterior
+		numeroAnterior = numero;
 		
 		// Repetimos el bloque de instrucciones mientras que numero no sea 0
-		do {
-			
-			// Asignamos el valor de numero a numeroAnterior
-			numeroAnterior = numero;
-			
-			// Pedimos el numero al usuario
-			System.out.print("Dime un número: ");
-			numero = reader.nextInt();
+		while (numero != 0) {
 			
 			// Incrementamos la variable contadorNumeros
 			contadorNumeros++;
@@ -44,11 +39,18 @@ public class Ejercicio8 {
 			if (numero < numeroAnterior && numero != 0) {
 				System.out.println("Fallo es menor.");
 				contadorFallos++;
+				
+			// Actualizamos numeroAnterior
+			numeroAnterior = numero;
+				
+			// Pedimos el numero al usuario
+			System.out.print("Dime un número: ");
+			numero = reader.nextInt();
+			
 			}
 			
-		} while (numero != 0);
-		
-		
+		}
+	
 		// Mostramos el total de numeros introducidos y el total de fallos
 		System.out.println("Total de números introducidos: " + contadorNumeros);
 		System.out.println("Números fallados: " + contadorFallos);
